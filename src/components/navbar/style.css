@@ -1,0 +1,44 @@
+.qtbtn{
+  color: rgb(255, 255, 255);
+  font-weight: 500;
+  font-size: 16px;
+  position: relative;
+}
+
+.qtbtn::before{
+  content: '';
+  width: 50%;
+  height: 100%;
+  background-color: #0010f1;
+  position: absolute;
+  left: 0;
+  top: 0;
+  z-index: -1;
+}
+.qtbtn:hover::before{
+  transition: all .3s ease-in-out;
+  width: 100%;
+}
+.bg{
+  position: relative;
+}
+.bg::before{
+  position: absolute;
+  content: "";
+  left: 0;
+  right: 0;
+  top: 0;
+  background: linear-gradient(180deg,#161616 0,#161616 42%,hsla(0,0%,9%,0));
+  height: 160px;
+}
+
+.bg::after{
+  position: absolute;
+  content: "";
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: linear-gradient(0deg,#161616 0,#161616 42%,hsla(0,0%,9%,0));
+  height: 160px;
+}
+

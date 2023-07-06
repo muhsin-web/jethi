@@ -48,6 +48,8 @@ export default function Navbar() {
         px={{ base: 4 }}
         borderStyle={'solid'}
         padding='15px 0'
+        paddingLeft={{sm: 7}}
+        paddingRight={{sm: 7}}
         borderColor={useColorModeValue('gray.200', 'gray.900')}
         align={'center'}>
        
@@ -62,18 +64,7 @@ export default function Navbar() {
             <DesktopNav />
           </Flex>
 
-          <button 
-          className='qtbtn' style={{
-             backgroundColor: 'transparent',
-             overflow: 'visible',
-             margin: '0 20px',
-             padding: '5px 20px',
-             display: 'flex',
-             gap: 10              }} >
-                <Image objectFit={'contain'} src='http://jts.colladome.in/assets/images/gq-icon.png'/>
-            GET QOUTE
-          </button>
-
+         
             <Flex
             flex={{ base: 1, md: 'auto' }}
             ml={{ base: -2 }}
@@ -105,25 +96,31 @@ const DesktopNav = () => {
   const popoverContentBgColor = useColorModeValue('white', 'gray.800');
 
   return (
-    <Stack direction={'row'} spacing={4}>
+    <Stack direction={'row'} align={'center'} spacing={4}>
       {NAV_ITEMS.map((navItem) => (
         <Box key={navItem.label}>
           <Popover trigger={'hover'} placement={'bottom'}>
             <PopoverTrigger>
-              <Link
-                p={2}
-                href={navItem.href ?? '#'}
-                fontSize={'14px'}
-                fontWeight={500}
-                color={linkColor}
-                _hover={{
-                  textDecoration: 'none',
-                }}>
-                {navItem.label}
-                {
-                  navItem.icon && <Icon as={ChevronDownIcon}/>
-                }
-              </Link>
+              {
+                !navItem.btn ?
+                   <Link
+                      p={2}
+                      href={navItem.href ?? '#'}
+                      fontSize={{base: 20, md: 16, sm: 10}}
+                      fontWeight={500}
+                      color={linkColor}
+                      _hover={{
+                        textDecoration: 'none',
+                      }}>
+                      {!navItem.btn && navItem.label}
+                      {
+                        navItem.icon && <Icon as={ChevronDownIcon}/>
+                      }
+                  </Link> : <Button fontSize={{md: 16, sm: 10}} color={'white'} className='qtbtn' style={{ backgroundColor: 'transparent', overflow: 'visible', margin: '0 20px', padding: '3px 20px', display: 'flex', gap: 10}} >
+                        <Image objectFit={'contain'} src='http://jts.colladome.in/assets/images/gq-icon.png'/>
+                    GET QOUTE
+                  </Button>
+              }
             </PopoverTrigger>
 
             {navItem.children && (
@@ -141,7 +138,7 @@ const DesktopNav = () => {
                 margin={'auto'}
                 >
                   <PopoverArrow />
-                  <Box width={200} minH={300}>
+                  <Box bg={'gray.600'} width={200} minH={300}>
                     {
                       navItem.subHeader
                     }
@@ -198,7 +195,7 @@ const DesktopSubNav = ({ label, href, subLabel }: NavItem) => {
 const MobileNav = () => {
   return (
     <Stack
-      bg={useColorModeValue('white', 'gray.800')}
+      bg={useColorModeValue('transparent', 'gray.800')}
       p={4}
       display={{ md: 'none' }}>
       {NAV_ITEMS.map((navItem) => (
@@ -265,6 +262,7 @@ interface NavItem {
   href?: string;
   icon?: boolean;
   subHeader?: string
+  btn?: boolean
 }
 
 
@@ -299,6 +297,21 @@ const NAV_ITEMS: Array<NavItem> = [
         subLabel: 'Up-and-coming Designers',
         href: '#',
       },
+      {
+        label: 'New & Noteworthy',
+        subLabel: 'Up-and-coming Designers',
+        href: '#',
+      },
+      {
+        label: 'New & Noteworthy',
+        subLabel: 'Up-and-coming Designers',
+        href: '#',
+      },
+      {
+        label: 'New & Noteworthy',
+        subLabel: 'Up-and-coming Designers',
+        href: '#',
+      },
     ],
   },
   {
@@ -320,5 +333,10 @@ const NAV_ITEMS: Array<NavItem> = [
   {
     label: 'Work',
     href: '#',
+  },
+  {
+    label: 'GET QOUTE',
+    href: '#',
+    btn: true,
   },
 ];

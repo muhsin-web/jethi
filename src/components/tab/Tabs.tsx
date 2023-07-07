@@ -4,7 +4,7 @@ import TechIcons from "../TechIcons"
   const SecTabs = () => {
     return (
       <Tabs flexDirection={['column', 'column', 'row']} width={'full'} display='flex' variant="unstyled">
-      <TabList overflow={'scroll'} gap={5} fontSize={''} flexWrap={'wrap'} alignItems={'center'} justifyContent={'center'} display="flex" flexDirection={['row', 'row', 'column']} placeItems={'center'}>
+      <TabList width={['full', '60%']} overflow={'scroll'} gap={5} fontSize={''} flexWrap={'wrap'} alignItems={'center'} justifyContent={'center'} display="flex" flexDirection={['row', 'row', 'column']} placeItems={'center'}>
         <Tab _before={{
               content: '""',
               width: 20,

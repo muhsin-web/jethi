@@ -27,7 +27,12 @@ import {
 } from '@chakra-ui/icons'
 import Logo from '../Logo';
 
-export default function Navbar() {
+type Props = {
+  navColor: string
+}
+
+export default function Navbar({navColor}: Props) {
+  console.log(navColor)
   const { isOpen, onToggle } = useDisclosure();
 
   return (
@@ -40,7 +45,7 @@ export default function Navbar() {
       zIndex={100}
       margin={'auto'}
         justifyContent='space-between'
-        bg={useColorModeValue('transparent', 'gray.800')}
+        bg={navColor}
         color={useColorModeValue('gray.600', 'white')}
         minH={'60px'}
         maxW={1170}

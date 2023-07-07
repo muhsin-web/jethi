@@ -30,8 +30,8 @@ export default function HeroBanner() {
         bgGradient={'linear(180deg,#161616 0,#161616 42%,hsla(0,0%,9%,0)'}>
         <Stack align={'center'} spacing={6}>
           <Box>
-            <Heading color='#fff' fontSize={{base: 48, md: 45, sm: 29}}>Empowering Businesses Globally With</Heading>
-            <Heading color='#fff' fontSize={{base: 48, md: 45, sm: 29}}>Technologgy Consulting</Heading>
+            <Heading color='#fff' fontSize={{base: 25, md: 45, sm: 29}}>Empowering Businesses Globally With</Heading>
+            <Heading color='#fff' fontSize={{base: 25, md: 45, sm: 29}}>Technologgy Consulting</Heading>
           </Box>
           <Text
           maxWidth={700}

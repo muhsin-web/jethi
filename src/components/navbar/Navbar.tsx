@@ -18,7 +18,7 @@ import {
   PopoverHeader,
   PopoverArrow,
 } from '@chakra-ui/react';
-import './style.css'
+import '../navbar/style.css'
 import {
   HamburgerIcon,
   CloseIcon,
@@ -31,7 +31,7 @@ export default function Navbar() {
   const { isOpen, onToggle } = useDisclosure();
 
   return (
-    <Box>
+    <Box position='relative'>
       <Flex
       position={'fixed'}
       width='100%'
@@ -48,8 +48,8 @@ export default function Navbar() {
         px={{ base: 4 }}
         borderStyle={'solid'}
         padding='15px 0'
-        paddingLeft={{sm: 7}}
-        paddingRight={{sm: 7}}
+        paddingLeft={{base: 5, sm: 7}}
+        paddingRight={{base: 5, sm: 7}}
         borderColor={useColorModeValue('gray.200', 'gray.900')}
         align={'center'}>
        
@@ -72,7 +72,7 @@ export default function Navbar() {
             <IconButton
               onClick={onToggle}
               icon={
-                isOpen ?  <Text color={'#fff'} height={50} width={50} fontSize='14px' display={'grid'} placeItems='center' border='2px solid #0010f1'>BA <br/> CK</Text> : <Text color={'#fff'} height={50} width={50} fontSize='14px' display={'grid'} placeItems='center' border='2px solid #0010f1'>ME <br/> NU</Text>
+                isOpen ?  <Text color={'#fff'} height={50} width={50} fontSize='14px' display={'grid'} placeItems='center' border='2px solid #fff'>BA <br/> CK</Text> : <Text color={'#fff'} height={50} width={50} fontSize='14px' display={'grid'} placeItems='center' border='2px solid #0010f1'>ME <br/> NU</Text>
               }
               variant={'ghost'}
               aria-label={'Toggle Navigation'}
@@ -83,7 +83,7 @@ export default function Navbar() {
       </Flex>
 
 
-      <Collapse in={isOpen} animateOpacity>
+      <Collapse in={isOpen} endingHeight={'100%'}>
         <MobileNav />
       </Collapse>
     </Box>
@@ -195,9 +195,25 @@ const DesktopSubNav = ({ label, href, subLabel }: NavItem) => {
 const MobileNav = () => {
   return (
     <Stack
-      bg={useColorModeValue('transparent', 'gray.800')}
+      bg={'black'}
       p={4}
+      position={'fixed'}
+      zIndex={100}
+      width={'100%'}
+      height='100%'
+      top={0}
+      // left={0}
+      right={0}
       display={{ md: 'none' }}>
+         {/* <IconButton
+              onClick={onToggle}
+              icon={
+                isOpen &&  <Text color={'#fff'} height={50} width={50} fontSize='14px' display={'grid'} placeItems='center' border='2px solid #fff'>BA <br/> CK</Text>
+              }
+              variant={'ghost'}
+              aria-label={'Toggle Navigation'}
+              _hover={{background: 'transparent'}}
+            /> */}
       {NAV_ITEMS.map((navItem) => (
         <MobileNavItem key={navItem.label} {...navItem} />
       ))}

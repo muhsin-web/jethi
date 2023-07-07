@@ -18,7 +18,7 @@ import { extendTheme } from '@chakra-ui/react'
 const Logo = () => {
   return (
     <Link href='/'>
-      <Image width={[150, 250, 380]} height={65} src='http://jts.colladome.in/_next/static/media/logo.214490de.svg?imwidth=828'/>
+      <Image width={[150, 250, 380]} height={66} src='http://jts.colladome.in/_next/static/media/logo.214490de.svg?imwidth=828'/>
     </Link>
   )
 }

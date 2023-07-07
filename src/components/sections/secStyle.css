@@ -1,0 +1,23 @@
+.qtbt{
+  color: rgb(255, 255, 255);
+  font-weight: 500;
+  font-size: 16px;
+  position: relative;
+  width: 200px;
+}
+
+.qtbt::before{
+  content: 'hello';
+  width: 50%;
+  height: 100%;
+  background-color: #0010f1;
+  color: #fff;
+  position: absolute;
+  left: 0;
+  top: 0;
+  z-index: -1;
+}
+.qtbtn:hover::before{
+  transition: all .3s ease-in-out;
+  width: 100%;
+}

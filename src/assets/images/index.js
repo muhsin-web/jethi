@@ -4,6 +4,7 @@ import Data from './data.svg'
 import Product from './product.svg'
 import Webs from './webs.svg'
 import Dev from './dev.svg'
+import Computer from './computer.svg'
 
 
 
@@ -13,5 +14,6 @@ export{
   Product,
   Webs,
   Dev,
-  Mobile
+  Mobile,
+  Computer
 }

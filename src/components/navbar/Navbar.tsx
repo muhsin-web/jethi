@@ -26,63 +26,73 @@ import {
   ChevronDownIcon
 } from '@chakra-ui/icons'
 import Logo from '../Logo';
+import { useEffect, useState } from 'react';
 
 type Props = {
   navColor: string
 }
 
-export default function Navbar({navColor}: Props) {
-  console.log(navColor)
+export default function Navbar() {
+  const [navbarColor, setNavbarColor] = useState('transparent')
+
+  const navScroll = () => {
+    if(window.scrollY > 20){
+      setNavbarColor('#161616')
+    }else{
+      setNavbarColor('transparent')
+    }
+  }
+
+  window.addEventListener('scroll', navScroll)
+
   const { isOpen, onToggle } = useDisclosure();
 
   return (
-    <Box position='relative'>
+    <Box position='relative' bg={navbarColor} h={'auto'} zIndex={200} w={'100%'}>
       <Flex
-      position={'fixed'}
-      width='100%'
-      left={0}
-      right={0}
-      zIndex={100}
-      margin={'auto'}
-        justifyContent='space-between'
-        bg={navColor}
-        color={useColorModeValue('gray.600', 'white')}
-        minH={'60px'}
-        maxW={1170}
-        py={{ base: 2 }}
-        px={{ base: 4 }}
-        borderStyle={'solid'}
-        padding='15px 0'
-        paddingLeft={{base: 5, sm: 7}}
-        paddingRight={{base: 5, sm: 7}}
-        borderColor={useColorModeValue('gray.200', 'gray.900')}
-        align={'center'}>
-       
+          bg={navbarColor}
+          opacity={0.92}
+          position={'fixed'}
+          width='100%'
+          left={0}
+          right={0}
+          zIndex={-1}
+        >
+          <Flex
+            margin={'auto'}
+            justifyContent='space-between'
+            color={useColorModeValue('gray.600', 'white')}
+            minH={'60px'}
+            minW={1180}
+            py={{ base: 2 }}
+            px={{ base: 4 }}
+            padding='15px 0'
+            align={'center'}
+            // bg={'red'}
+          >
+            <Box>
+              <Logo />
+            </Box>
 
-          <Box>
-            <Logo />
-          </Box>
-
-        <Flex align={'center'} justify={{ base: 'center', md: 'start' }}>
-
-          <Flex display={{ base: 'none', md: 'flex' }} ml={10}>
-            <DesktopNav />
-          </Flex>
-
-         
-            <Flex
-            flex={{ base: 1, md: 'auto' }}
-            ml={{ base: -2 }}
-            >
-            <IconButton
-              onClick={onToggle}
-              icon={
-                isOpen ?  <Text color={'#fff'} height={50} width={50} fontSize='14px' display={'grid'} placeItems='center' border='2px solid #fff'>BA <br/> CK</Text> : <Text color={'#fff'} height={50} width={50} fontSize='14px' display={'grid'} placeItems='center' border='2px solid #0010f1'>ME <br/> NU</Text>
-              }
-              variant={'ghost'}
-              aria-label={'Toggle Navigation'}
-              _hover={{background: 'transparent'}}
-            />
+            <Flex align={'center'} justify={{ base: 'center', md: 'start' }}>
+              <Flex display={{ base: 'none', md: 'flex' }} ml={10}>
+              <DesktopNav />
+            </Flex>
+ 
+              <Flex
+              flex={{ base: 1, md: 'auto' }}
+              ml={{ base: -2 }}
+              >
+              <IconButton
+                onClick={onToggle}
+                icon={
+                  isOpen ?  <Text color={'#fff'} height={50} width={50} fontSize='14px' display={'grid'} placeItems='center' border='2px solid #fff'>BA <br/> CK</Text> : <Text color={'#fff'} height={50} width={50} fontSize='14px' display={'grid'} placeItems='center' border='2px solid #0010f1'>ME <br/> NU</Text>
+                }
+                variant={'ghost'}
+                aria-label={'Toggle Navigation'}
+                _hover={{background: 'transparent'}}
+              />
+            </Flex>
           </Flex>
         </Flex>
       </Flex>

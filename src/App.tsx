@@ -32,7 +32,7 @@ function App() {
   }, []);
   return (
     <div className="App">
-     <Navbar navColor={navbarColor} />
+     <Navbar />
      <HeroBanner />
      <SectionOne />
      <SectionTwo />

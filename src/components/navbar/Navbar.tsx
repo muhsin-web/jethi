@@ -13,7 +13,6 @@ import {
   PopoverTrigger,
   PopoverContent,
   useColorModeValue,
-  useBreakpointValue,
   useDisclosure,
   PopoverHeader,
   PopoverArrow,
@@ -112,8 +111,8 @@ const DesktopNav = () => {
 
   return (
     <Stack direction={'row'} align={'center'} spacing={4}>
-      {NAV_ITEMS.map((navItem) => (
-        <Box key={navItem.label}>
+      {NAV_ITEMS.map((navItem, index) => (
+        <Box key={index * 12}>
           <Popover trigger={'hover'} placement={'bottom'}>
             <PopoverTrigger>
               {
@@ -160,8 +159,8 @@ const DesktopNav = () => {
                   </Box>
                
                 <Stack display={'grid'} gap={0} gridTemplateColumns='1fr 1fr 1fr'>
-                  {navItem.children.map((child) => (
-                    <DesktopSubNav key={child.label} {...child} />
+                  {navItem.children.map((child, index) => (
+                    <DesktopSubNav key={index + 17} {...child} />
                   ))}
                 </Stack>
               </PopoverContent>
@@ -229,8 +228,8 @@ const MobileNav = () => {
               aria-label={'Toggle Navigation'}
               _hover={{background: 'transparent'}}
             /> */}
-      {NAV_ITEMS.map((navItem) => (
-        <MobileNavItem key={navItem.label} {...navItem} />
+      {NAV_ITEMS.map((navItem, index) => (
+        <MobileNavItem key={index} {...navItem} />
       ))}
     </Stack>
   );
@@ -275,8 +274,8 @@ const MobileNavItem = ({ label, children, href }: NavItem) => {
           borderColor={useColorModeValue('gray.200', 'gray.700')}
           align={'start'}>
           {children &&
-            children.map((child) => (
-              <Link key={child.label} py={2} href={child.href}>
+            children.map((child, key) => (
+              <Link py={2} key={key * 5} href={child.href}>
                 {child.label}
               </Link>
             ))}

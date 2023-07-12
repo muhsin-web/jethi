@@ -18,7 +18,7 @@ export default function SectionThree() {
       <Box as={Container} maxW={1170}>
         <Stack as={Container} maxW={['full', '75%', '50%']} marginLeft={0} textAlign={'left'} mb={12}>
           <Heading fontSize={[28, 38, 48]}>Technologies We Work With</Heading>
-          <Text fontSize={[14, 16, 18]}>Jethi Tech Solutions mobile app development company leverages the most effective technologies to create bespoke solutions powered by strong coding standards.</Text>
+          <Text color={'#969696'} fontSize={[14, 16, 18]}>Jethi Tech Solutions mobile app development company leverages the most effective technologies to create bespoke solutions powered by strong coding standards.</Text>
         </Stack>
       </Box>
 

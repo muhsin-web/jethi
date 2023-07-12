@@ -7,37 +7,36 @@ import SectionOne from './components/sections/SectionOne';
 import SectionTwo from './components/sections/SectionTwo';
 import SectionThree from './components/sections/SectionThree';
 import {scrollSpy, Events} from 'react-scroll'
+import SectionFour from './components/sections/SectionFour';
+import { Box } from '@chakra-ui/react';
 
 
 
 function App() {
-  const [navbarColor, setNavbarColor] = useState('transparent');
+  const [pointer, setPointer] = useState({x: 0, y: 0});
+
+
 
   useEffect(() => {
-    const handleScroll = () => {
-      const scrollPosition = window.pageYOffset;
-      if (scrollPosition > 70) {
-        setNavbarColor('#f00'); // Set your desired background color here
-      } else {
-        setNavbarColor('transparent');
-      }
-    };
+    window.addEventListener('mousemove', (event)=>{
+      setPointer({x: event.clientX, y: event.clientY})
+    })
 
-    Events.scrollEvent.register('scroll', handleScroll);
-    scrollSpy.update();
-
-    return () => {
-      Events.scrollEvent.remove('scroll');
-    };
+    // window.addEventListener('scroll', (event) => {
+    //   const scrolly = window.scrollY
+    //   // setPointer({...pointer, y: scrolly})
+    // })
   }, []);
   return (
-    <div className="App">
-     <Navbar />
-     <HeroBanner />
-     <SectionOne />
-     <SectionTwo />
-     <SectionThree />
-    </div>
+    <Box className="App" position={'relative'}>
+      <Box width={5} height={5} rounded={'full'} zIndex={300} position={'absolute'} left={pointer.x} top={pointer.y} bg={'red'}></Box>
+      <Navbar />
+      <HeroBanner />
+      <SectionOne />
+      <SectionTwo />
+      <SectionThree />
+      <SectionFour />
+    </Box>
   );
 }
 

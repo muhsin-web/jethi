@@ -34,3 +34,108 @@ export const cardData = [
     image: `${Data}`
   },
 ]
+
+export const tabCategory = {
+  tablisting: [
+    'Web development',
+    'app development',
+    'finanacing',
+    'schooling'
+  ],
+
+  tabpanels: [
+    {
+      heading: 'Frontend Technologies',
+      content: 'Frontend is the window from where customers and clients will view your business and decide whether to associate further.',
+      content_: 'We have in-house frontend experts using the best practices and technologies to build responsive and impressive interfaces.',
+      iconslist: [
+        {
+          name: 'react',
+          icon: 'http://jts.colladome.in/assets/images/React_js_logo.svg?imwidth=256'
+        },
+        {
+          name: 'typescript',
+          icon: 'http://jts.colladome.in/assets/images/Typescript_logo.svg?imwidth=256'
+        },
+        {
+          name: 'angular',
+          icon: 'http://jts.colladome.in/assets/images/Angular_logo.svg?imwidth=256'
+        },
+        {
+          name: 'angular',
+          icon: 'http://jts.colladome.in/assets/images/Angular_logo.svg?imwidth=256'
+        },
+        {
+          name: 'angular',
+          icon: 'http://jts.colladome.in/assets/images/Angular_logo.svg?imwidth=256'
+        },
+        {
+          name: 'angular',
+          icon: 'http://jts.colladome.in/assets/images/Angular_logo.svg?imwidth=256'
+        },
+      ]
+    },
+    {
+      heading: 'Data Analytics',
+      content: 'Backend is the server-side of the application, which may not be visible but plays a pivotal role in storing and organizing data.',
+      content_: 'At Jethi Tech Solutions, we build performant and robust backend solutions irrespective of their scale and complexity.',
+      iconslist:  [
+        {
+          name: 'react',
+          icon: 'http://jts.colladome.in/assets/images/React_js_logo.svg?imwidth=256'
+        },
+        {
+          name: 'typescript',
+          icon: 'http://jts.colladome.in/assets/images/Typescript_logo.svg?imwidth=256'
+        },
+        {
+          name: 'angular',
+          icon: 'http://jts.colladome.in/assets/images/Angular_logo.svg?imwidth=256'
+        },
+        {
+          name: 'angular',
+          icon: 'http://jts.colladome.in/assets/images/Angular_logo.svg?imwidth=256'
+        },
+        {
+          name: 'angular',
+          icon: 'http://jts.colladome.in/assets/images/Angular_logo.svg?imwidth=256'
+        },
+        {
+          name: 'angular',
+          icon: 'http://jts.colladome.in/assets/images/Angular_logo.svg?imwidth=256'
+        },
+      ]
+    },
+    {
+      heading: 'Software Engineering',
+      content: 'Frontend is the window from where customers and clients will view your business and decide whether to associate further.',
+      content_: 'We have in-house frontend experts using the best practices and technologies to build responsive and impressive interfaces.',
+      iconslist:  [
+        {
+          name: 'react',
+          icon: 'http://jts.colladome.in/assets/images/React_js_logo.svg?imwidth=256'
+        },
+        {
+          name: 'typescript',
+          icon: 'http://jts.colladome.in/assets/images/Typescript_logo.svg?imwidth=256'
+        },
+        {
+          name: 'angular',
+          icon: 'http://jts.colladome.in/assets/images/Angular_logo.svg?imwidth=256'
+        },
+        {
+          name: 'angular',
+          icon: 'http://jts.colladome.in/assets/images/Angular_logo.svg?imwidth=256'
+        },
+        {
+          name: 'angular',
+          icon: 'http://jts.colladome.in/assets/images/Angular_logo.svg?imwidth=256'
+        },
+        {
+          name: 'angular',
+          icon: 'http://jts.colladome.in/assets/images/Angular_logo.svg?imwidth=256'
+        },
+      ]
+    }
+  ]
+}

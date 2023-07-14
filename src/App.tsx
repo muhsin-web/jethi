@@ -9,6 +9,9 @@ import SectionThree from './components/sections/SectionThree';
 import {scrollSpy, Events} from 'react-scroll'
 import SectionFour from './components/sections/SectionFour';
 import { Box } from '@chakra-ui/react';
+import SectionFive from './components/sections/SectionFive';
+import SectionSix from './components/sections/SectionSix';
+import SectionSeven from './components/sections/SectionSeven';
 
 
 
@@ -29,13 +32,16 @@ function App() {
   }, []);
   return (
     <Box className="App" position={'relative'}>
-      <Box width={5} height={5} rounded={'full'} zIndex={300} position={'absolute'} left={pointer.x} top={pointer.y} bg={'red'}></Box>
+      <Box width={5} height={5} rounded={'full'} zIndex={300} position={'absolute'} left={pointer.x} top={pointer.y} bg={'blue'}></Box>
       <Navbar />
       <HeroBanner />
       <SectionOne />
       <SectionTwo />
       <SectionThree />
       <SectionFour />
+      <SectionFive />
+      <SectionSix />
+      <SectionSeven />
     </Box>
   );
 }

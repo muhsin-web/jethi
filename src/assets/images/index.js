@@ -5,7 +5,11 @@ import Product from './product.svg'
 import Webs from './webs.svg'
 import Dev from './dev.svg'
 import Computer from './computer.svg'
-
+import SearchIcon from './search.svg'
+import Balance from './balance.svg'
+import Flight from './flight.svg'
+import Rarings from './ratings.svg'
+import Code from './code.svg'
 
 
 export{
@@ -15,5 +19,10 @@ export{
   Webs,
   Dev,
   Mobile,
-  Computer
+  Computer,
+  SearchIcon,
+  Code, 
+  Rarings,
+  Balance,
+  Flight
 }

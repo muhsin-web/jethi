@@ -36,7 +36,7 @@ export default function SectionFour() {
               <Heading
                 as={'h1'}
                 fontSize={{ base: 'xl', sm: '48px' }}
-                mb={5} fontWeight={800}>
+                mb={6} fontWeight={800}>
                 Hire Dedicated  <Text as={'span'} bg={'blue'} padding={'8px 15px'}>Developers</Text>
               </Heading>
               <Text

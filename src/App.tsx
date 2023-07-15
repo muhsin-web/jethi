@@ -12,6 +12,9 @@ import { Box } from '@chakra-ui/react';
 import SectionFive from './components/sections/SectionFive';
 import SectionSix from './components/sections/SectionSix';
 import SectionSeven from './components/sections/SectionSeven';
+import SectionEight from './components/sections/SectionEight';
+import ReviewSection from './components/sections/ReviewSection';
+import AwardSection from './components/sections/AwardSection';
 
 
 
@@ -42,6 +45,9 @@ function App() {
       <SectionFive />
       <SectionSix />
       <SectionSeven />
+      <SectionEight />
+      <ReviewSection />
+      <AwardSection />
     </Box>
   );
 }

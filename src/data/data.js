@@ -1,4 +1,4 @@
-import { Data, Computer, Product, Web, Webs, Mobile  } from "../assets/images"
+import { Data, Computer, Product, Web, Webs, Mobile, Flight, Code, Rarings, Balance, SearchIcon, Education, Health, Logistics, Networking, Retail, Estate, Travel, Resstaurant  } from "../assets/images"
 
 export const cardData = [
   {
@@ -144,26 +144,74 @@ export const SecCategory = [
   {
     title: 'Discovery',
     content: 'Our experts understand and build on your idea and work on your vision. We create a proof of concept and conduct feasibility studies to explore your idea’s potential.',
-    top: 55
+    top: 55,
+    icon: `${SearchIcon}`
   },
   {
     title: 'Strategy',
     content: 'With the idea and concept clear, we will work on building effective development strategies and decide the required resources, team, and technologies.',
-    top:  74
+    top:  74,
+    icon: `${Balance}`
   },
   {
     title: 'Design',
     content: 'With reference to the customer base and your preferences, our designers create high-fidelity designs representing your services and products visible through an eye-catchy interface.',
-    top: 140
+    top: 140,
+    icon:  `${Rarings}`
   },
   {
     title: 'Programming',
     content: 'Our coding standards and practices redefine your application’s performance. We write clean, readable, and scalable code while ensuring efficient functionality.',
-    top: 165
+    top: 165,
+    icon: `${Code}`
   },
   {
     title: 'Support and Launch',
     content: 'Jethi Tech Solutions houses deployment experts with a complete understanding of the platform-specific guidelines. We also provide post-development support for every type of solution.',
-    top: 345
+    top: 345,
+    icon: `${Flight}`
+  }
+]
+
+export const Industries = [
+  {
+    icon: `${Education}`,
+    title: 'education'
+  },
+  {
+    icon: `${Health}`,
+    title: 'healthcare & fitness'
+  },
+  {
+    icon: `${Logistics}`,
+    title: 'logistics & distribution'
+  },
+  {
+    icon: `${Networking}`,
+    title: 'social networking'
+  },
+  {
+    icon: `${Retail}`,
+    title: 'retail & ecommerce'
+  },
+  {
+    icon: `${Estate}`,
+    title: 'real estate'
+  },
+  {
+    icon: `${Travel}`,
+    title: 'travel & hospitality'
+  },
+  {
+    icon: `${Resstaurant}`,
+    title: 'food & restaurant'
+  },
+  {
+    icon: `${Resstaurant}`,
+    title: 'food & restaurant'
+  },
+  {
+    icon: `${Resstaurant}`,
+    title: 'food & restaurant'
   }
 ]

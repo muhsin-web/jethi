@@ -1,8 +1,7 @@
 import { Box, Flex, Heading, Image, Stack, Text } from '@chakra-ui/react'
 import React from 'react'
-import { Balance, Flight, Rarings, SearchIcon, Code } from '../../assets/images'
-import { CustomText } from '../styledcomponents/tabs.style'
 import { SecCategory } from '../../data/data'
+import TextCard from '../cards/TextCard'
 
 const SectionSeven = () => {
   return (
@@ -18,92 +17,11 @@ const SectionSeven = () => {
           <Box position={'absolute'} left={0} top={-100}>
             <Image width={'100%'} src='http://jts.colladome.in/assets/images/blue-line.svg'/>
           </Box>
-
           {
             SecCategory?.map((item, index) => (
-              <Box display={'grid'} placeItems={'center'} width={'20%'} position={'relative'} top={-50}>
-              <Stack>
-                <Box margin={'auto'} width={'fit-content'} padding={10} display={'grid'} placeItems={'center'} bg={'#fff'} shadow={'2xl'} rounded={15}>
-                  <Image src={SearchIcon}/>
-                </Box>
-                  <CustomText>1</CustomText>
-                  <Box mt={'-55px'} textAlign={'left'}>
-                    <Heading>Discovery</Heading>
-                    <Text>
-                      Our experts understand and build on your idea and work on your vision. We create a proof of concept and conduct feasibility studies to explore your idea’s potential.
-                    </Text>
-                  </Box>
-              </Stack>
-            </Box>
+              <TextCard key={index * 216} index={index} title={item.title} content={item.content} top = {item.top} icon={item.icon}/>
             ))
           }
-
-          <Box display={'grid'} placeItems={'center'} width={'20%'} position={'relative'} top={-50}>
-            <Stack>
-              <Box margin={'auto'} width={'fit-content'} padding={10} display={'grid'} placeItems={'center'} bg={'#fff'} shadow={'2xl'} rounded={15}>
-                <Image src={SearchIcon}/>
-              </Box>
-                <CustomText>1</CustomText>
-                <Box mt={'-55px'} textAlign={'left'}>
-                  <Heading>Discovery</Heading>
-                  <Text>
-                    Our experts understand and build on your idea and work on your vision. We create a proof of concept and conduct feasibility studies to explore your idea’s potential.
-                  </Text>
-                </Box>
-            </Stack>
-          </Box>
-
-          <Box position={'relative'} top={-74}>
-            <Stack fontSize={'calc(40px + 4.75295vw)'}>
-              <Box padding={10} display={'grid'} placeItems={'center'} bg={'#fff'} shadow={'2xl'} rounded={15}>
-                <Image src={Balance}/>
-              </Box>
-                <CustomText>2</CustomText>
-                <Box mt={'-55px'}>
-                  <Heading>Discovery</Heading>
-                  <Text></Text>
-                </Box>
-            </Stack>
-          </Box>
-
-          <Box position={'relative'} top={-140}>
-            <Stack fontSize={'calc(40px + 4.75295vw)'}>
-              <Box padding={10} display={'grid'} placeItems={'center'} bg={'#fff'} shadow={'2xl'} rounded={15}>
-                <Image src={Rarings}/>
-              </Box>
-                <CustomText>3</CustomText>
-                <Box mt={'-55px'}>
-                  <Heading>Discovery</Heading>
-                  <Text></Text>
-                </Box>
-            </Stack>
-          </Box>
-
-          <Box position={'relative'} top={-165}>
-            <Stack fontSize={'calc(40px + 4.75295vw)'}>
-              <Box padding={10} display={'grid'} placeItems={'center'} bg={'#fff'} shadow={'2xl'} rounded={15}>
-                <Image src={Code}/>
-              </Box>
-                <CustomText>4</CustomText>
-                <Box mt={'-55px'}>
-                  <Heading>Discovery</Heading>
-                  <Text></Text>
-                </Box>
-            </Stack>
-          </Box>
-
-          <Box position={'relative'} top={-345}>
-            <Stack fontSize={'calc(40px + 4.75295vw)'}>
-              <Box padding={10} display={'grid'} placeItems={'center'} bg={'#fff'} shadow={'2xl'} rounded={15}>
-                <Image src={Flight}/>
-              </Box>
-                <CustomText>5</CustomText>
-                <Box mt={'-55px'}>
-                  <Heading>Discovery</Heading>
-                  <Text></Text>
-                </Box>
-            </Stack>
-          </Box>
         </Flex>
     </Box>
   )

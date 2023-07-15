@@ -10,6 +10,17 @@ import Balance from './balance.svg'
 import Flight from './flight.svg'
 import Rarings from './ratings.svg'
 import Code from './code.svg'
+import Finance from './finance.svg'
+import Logistics from './logistics.svg'
+import Networking from './networking.svg'
+import Health from './health.svg'
+import Estate from './estate.svg'
+import Resstaurant from './restaurant.svg'
+import Travel from './travel.svg'
+import Education from './education.svg'
+import Entertainment from './entertainment.svg'
+import Retail from './retail.svg'
+import Qoute from './qoute.svg'
 
 
 export{
@@ -24,5 +35,16 @@ export{
   Code, 
   Rarings,
   Balance,
-  Flight
+  Flight,
+  Entertainment,
+  Education,
+  Travel,
+  Resstaurant,
+  Estate,
+  Health,
+  Networking,
+  Logistics,
+  Finance,
+  Retail,
+  Qoute
 }

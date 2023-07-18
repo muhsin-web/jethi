@@ -12,25 +12,33 @@ const AwardSection = () => {
 
         <Flex mt={50} justifyContent={'space-between'}>
           <Box rounded={15} p={'30px 15px'} _hover={{
-            shadow: 'xl'
+            shadow: 'xl',
+            transform: 'translateY(-15px)',
+            transition: 'all .2s ease-in-out'
           }}>
             <Image src={'http://jts.colladome.in/_next/static/media/am-badge-img1.9953902d.png?imwidth=640'}/>
           </Box>
 
           <Box rounded={15} p={'30px 15px'} _hover={{
-            shadow: 'xl'
+            shadow: 'xl',
+            transform: 'translateY(-15px)',
+            transition: 'all .2s ease-in-out'
           }}>
             <Image src={'http://jts.colladome.in/_next/static/media/am-badge-img1.9953902d.png?imwidth=640'}/>
           </Box>
 
           <Box rounded={15} p={'30px 15px'} _hover={{
-            shadow: 'xl'
+            shadow: 'xl',
+            transform: 'translateY(-15px)',
+            transition: 'all .2s ease-in-out'
           }}>
             <Image src={'http://jts.colladome.in/_next/static/media/am-badge-img3.2498d7e2.png?imwidth=640'}/>
           </Box>
 
           <Box rounded={15} p={'30px 15px'} _hover={{
-            shadow: 'xl'
+            shadow: 'xl',
+            transform: 'translateY(-15px)',
+            transition: 'all .2s ease-in-out'
           }}>
             <Image src={'http://jts.colladome.in/_next/static/media/am-badge-img4.f82a0bda.png?imwidth=640'}/>
           </Box>

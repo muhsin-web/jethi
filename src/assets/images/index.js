@@ -22,7 +22,6 @@ import Entertainment from './entertainment.svg'
 import Retail from './retail.svg'
 import Qoute from './qoute.svg'
 
-
 export{
   Web, 
   Data,

@@ -15,6 +15,7 @@ import SectionSeven from './components/sections/SectionSeven';
 import SectionEight from './components/sections/SectionEight';
 import ReviewSection from './components/sections/ReviewSection';
 import AwardSection from './components/sections/AwardSection';
+import SectionNine from './components/sections/SectionNine';
 
 
 
@@ -48,6 +49,7 @@ function App() {
       <SectionEight />
       <ReviewSection />
       <AwardSection />
+      <SectionNine />
     </Box>
   );
 }
